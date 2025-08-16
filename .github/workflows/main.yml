@@ -18,10 +18,10 @@ jobs:
           dotnet-version: '8.0.x'
 
       - name: Restore dependencies
-        run: dotnet restore
+        run: dotnet restore Story_Exam/Story_Exam.csproj
 
       - name: Build solution
-        run: dotnet build --configuration Release
+        run: dotnet build Story_Exam/Story_Exam.csproj --configuration Release
 
       - name: Run tests
-        run: dotnet test --no-build --verbosity normal
+        run: dotnet test Story_Exam.Tests/Story_Exam.Tests.csproj --no-build --verbosity normal
